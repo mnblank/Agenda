@@ -1,0 +1,68 @@
+<resources>
+    <string name="app_name">Agenda</string>
+    <string name="task_title_hint">¿Que tienes que hacer?</string>
+    <string name="task_title_label">Titulo</string>
+    <string name="task_details_label">Detalles</string>
+    <string name="task_done_label">Listo</string>
+    <string name="date_picker_title">Fecha del Pendiente:</string>
+    <string name="time_picker_title">Hora del Pendiente:</string>
+    <string name="new_task">Nuevo Pendiente</string>
+    <string name="show_subtitle">Mostrar Pendientes</string>
+    <string name="hide_subtitle">Esconder Pendientes</string>
+    <string name="delete">Eliminar Pendiente</string>
+    <string name="empty_tasks_button">Lista Vacia\nClickea para agregar un Pendiente</string>
+    <plurals name="subtitle_plural">
+        <item quantity="one">%1$s pendiente</item>
+        <item quantity="other">%1$s pendiente</item>
+    </plurals>
+    <string name="task_contact_text">Elegir Contacto</string>
+    <string name="task_message_text">Enviar Mensaje</string>
+    <string name="task_report">%1$s!
+      The task was discovered on %2$s. %3$s, and %4$s
+    </string>
+    <string name="task_report_done">The case is done!</string>
+    <string name="task_report_undone">The case is not done</string>
+    <string name="task_report_no_contact">There is no contact.</string>
+    <string name="task_report_contact">The contact is %s.</string>
+    <string name="task_report_subject">CriminalIntent Task Report</string>
+    <string name="send_report">Send task report via</string>
+    <string name="call_contact">Call Contact</string>
+
+
+</resources>
+
+
+<!--                      INGLES
+<resources>
+    <string name="app_name">Agenda</string>
+    <string name="task_title_hint">Enter a title for the task.</string>
+    <string name="task_title_label">Title</string>
+    <string name="task_details_label">Details</string>
+    <string name="task_done_label">Done</string>
+    <string name="date_picker_title">Date of task:</string>
+    <string name="time_picker_title">Time of task:</string>
+    <string name="new_task">New Task</string>
+    <string name="show_subtitle">Show Subtitle</string>
+    <string name="hide_subtitle">Hide Subtitle</string>
+    <string name="delete">Delete Task</string>
+    <string name="empty_tasks_button">Empty List\nClick to Add Task</string>
+    <plurals name="subtitle_plural">
+        <item quantity="one">%1$s task</item>
+        <item quantity="other">%1$s tasks</item>
+    </plurals>
+    <string name="task_contact_text">Choose Contact</string>
+    <string name="task_report_text">Send Task Report</string>
+    <string name="task_report">%1$s!
+      The task was discovered on %2$s. %3$s, and %4$s
+    </string>
+    <string name="task_report_done">The case is done!</string>
+    <string name="task_report_undone">The case is not done</string>
+    <string name="task_report_no_contact">There is no contact.</string>
+    <string name="task_report_contact">The contact is %s.</string>
+    <string name="task_report_subject">CriminalIntent Task Report</string>
+    <string name="send_report">Send task report via</string>
+    <string name="call_contact">Call Contact</string>
+
+
+</resources>
+-->

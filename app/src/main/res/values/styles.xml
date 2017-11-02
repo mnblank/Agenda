@@ -1,0 +1,23 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/Coral</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="buttonStyle">@style/BeatBoxButton</item>
+    </style>
+
+    <style name="MyCheckBox" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@color/Coral</item>
+        <item name="colorControlActivated">@color/Coral</item>
+    </style>
+
+    <style name="BeatBoxButton" parent="Widget.AppCompat.Button.Colored">
+        <!--<item name="android:background">@drawable/button</item>-->
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+</resources>
