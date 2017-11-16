@@ -46,11 +46,13 @@ public class TaskFragment extends Fragment {
     private static final String ARG_TASK_ID = "task_id";
     private static final String DIALOG_DATE = "DialogDate";
     private static final String DIALOG_TIME = "DialogTime";
+    private static final String DIALOG_TEXT = "DialogText";
 
     private static final int REQUEST_DATE = 0;
     private static final int REQUEST_TIME = 1;
     private static final int REQUEST_CONTACT = 2;
     private static final int REQUEST_PHOTO = 3;
+    private static final int REQUEST_TEXT = 4;
 
     private Task mTask;
     private File mPhotoFile;
@@ -236,23 +238,26 @@ public class TaskFragment extends Fragment {
         });
 
 
-        //mMessageButton = v.findViewById(R.id.task_message);
+        mMessageButton = v.findViewById(R.id.task_message);
 
         // Para el Challenge: ShareCompat
         //mMessageButton.setEnabled(false);
 
-        /*mMessageButton.setOnClickListener(new View.OnClickListener() {
+        mMessageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ShareCompat.IntentBuilder intentBuilder = ShareCompat.IntentBuilder
+                /*ShareCompat.IntentBuilder intentBuilder = ShareCompat.IntentBuilder
                         .from(getActivity());
                 intentBuilder.setType("text/plain");
                 intentBuilder.setText(getTaskReport());
                 intentBuilder.setSubject(getString(R.string.task_report_subject));
                 intentBuilder.startChooser();
-                startActivity(intentBuilder.getIntent());
+                startActivity(intentBuilder.getIntent());*/
+
+                getTaskReport();
+
             }
-        });*/
+        });
 
         /*  El que se hace primero
         mReportButton.setOnClickListener(new View.OnClickListener() {
@@ -306,7 +311,8 @@ public class TaskFragment extends Fragment {
         // es true solo si hay un mPhotoFile y hay una app que tome fotos
         boolean canTakePhoto = mPhotoFile != null &&
                 captureImage.resolveActivity(packageManager) != null;
-        mPhotoButton.setEnabled(canTakePhoto);
+        //mPhotoButton.setEnabled(canTakePhoto);
+        mPhotoButton.setEnabled(false);
 
         if(canTakePhoto) {
             // un uri que da la direccion del archivo de la foto
@@ -320,8 +326,8 @@ public class TaskFragment extends Fragment {
                 startActivityForResult(captureImage, REQUEST_PHOTO);
             }
         });
-        mPhotoView = v.findViewById(R.id.task_photo);
-        updatePhotoView();
+        //mPhotoView = v.findViewById(R.id.task_photo);
+        //updatePhotoView();
 
 
         return v;
@@ -394,6 +400,9 @@ public class TaskFragment extends Fragment {
     }
 
     private String getTaskReport(){
+
+        /* En este se usaba el texto predefinido de CriminalIntent
+
         String doneString = null;
         if(mTask.isDone()){
             doneString = getString(R.string.task_report_done);
@@ -415,6 +424,23 @@ public class TaskFragment extends Fragment {
                 mTask.getTitle(), dateString, doneString, contact);
 
         return report;
+
+        */
+
+        // Se inicia el TextPicker para agarrar el texto que se enviara
+
+        String message = null;
+
+        FragmentManager manager = getFragmentManager();
+        TextPickerFragment dialog = TextPickerFragment
+                .newInstance();
+                /* Se crea una relacion entre dos fragmentos para mandarse informacion entre si.
+                Este metodo se encarga de establecer cual es el fragmento que recibira la informacion
+                 */
+        dialog.setTargetFragment(TaskFragment.this, REQUEST_TEXT);
+        dialog.show(manager, DIALOG_TEXT); // Muestra el DataPickerFragment
+
+        return null;
     }
 
 

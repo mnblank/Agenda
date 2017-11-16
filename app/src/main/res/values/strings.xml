@@ -6,6 +6,7 @@
     <string name="task_done_label">Listo</string>
     <string name="date_picker_title">Fecha del Pendiente:</string>
     <string name="time_picker_title">Hora del Pendiente:</string>
+    <string name="text_picker_title">Escribe tu Mensaje</string>
     <string name="new_task">Nuevo Pendiente</string>
     <string name="show_subtitle">Mostrar Pendientes</string>
     <string name="hide_subtitle">Esconder Pendientes</string>
@@ -27,6 +28,7 @@
     <string name="task_report_subject">CriminalIntent Task Report</string>
     <string name="send_report">Send task report via</string>
     <string name="call_contact">Call Contact</string>
+    <string name="message_hint">Escribe tu mensaje</string>
 
 
 </resources>
